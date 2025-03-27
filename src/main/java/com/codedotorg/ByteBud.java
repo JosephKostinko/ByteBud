@@ -147,9 +147,20 @@ public class ByteBud {
      * @return A string containing the bot's response.
      */
     private String getResponse(String inputText) {
-        
+        // Convert input to lowercase for case-insensitive matching
+        inputText = inputText.toLowerCase();
 
-        return "";
+        // Handle predefined responses
+        switch (inputText) {
+            case "hello":
+                return "Hi there! How can I assist you today?";
+            case "how are you?":
+                return "I'm just a bot, but I'm here to help!";
+            case "bye":
+                return "Goodbye! Have a great day!";
+            default:
+                return "I'm sorry, I didn't understand that. Can you rephrase?";
+        }
     }
 
 }
